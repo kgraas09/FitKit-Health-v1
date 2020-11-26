@@ -1,5 +1,10 @@
 module.exports = {
   entry: __dirname + '/client/src/index.jsx', // The entry point for the Application (Where ReactDOM.render is called)
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   module: {
     rules: [
       {
@@ -10,6 +15,9 @@ module.exports = {
           options: {
             presets: ['@babel/preset-react', '@babel/preset-env'] // Environment Presets... Not 100% what these do
           }
+        },
+        resolve: {
+          extensions: [".jsx", ".js"]
         }
       }
     ]
