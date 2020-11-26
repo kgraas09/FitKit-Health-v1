@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import getSupplements from '../lib/routes/getSupplementals.js';
-import getPreworkouts from '../lib/routes/getPreworkouts.js';
-import getPostworkouts from '../lib/routes/getPostworkouts.js';
+import getSupplements from '../lib/routes.js';
+import getPreworkouts from '../lib/routes.js';
+import getPostworkouts from '../lib/routes.js';
 import LandingPage from './components/Landing/landing.jsx';
 import Header from './components/Header/header.jsx';
 import MasterForm from './components/RecommendationForm/masterForm.jsx';
 import Results from './components/RecommendationForm/results.jsx';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import './app.css';
 
 const App = () => {
   const [supplements, setSupplements] = useState([]);
