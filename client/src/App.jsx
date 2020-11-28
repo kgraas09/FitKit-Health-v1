@@ -1,4 +1,4 @@
-import React from { useState, useEffect } 'react';
+import React, { useState, useEffect } from 'react';
 import getSupplements from '../lib/routes.js';
 import getPreworkouts from '../lib/routes.js';
 import getPostworkouts from '../lib/routes.js';

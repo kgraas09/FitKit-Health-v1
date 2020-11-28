@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import questionsList from './questionsList.js';
 import Step1 from './steps/step1.jsx';

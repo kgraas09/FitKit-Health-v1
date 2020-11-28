@@ -1,5 +1,5 @@
 module.exports = {
-  entry: __dirname + '/client/src/index.jsx', // The entry point for the Application (Where ReactDOM.render is called)
+  entry: __dirname + '/client/src/index.jsx',
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
@@ -8,12 +8,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: [/\.jsx$/], // Important that webpack compiles our React jsx files too
-        exclude: /node_modules/, // Ignoring the node_modules so they are not sent over with our client bundle
+        test: [/\.jsx$/], 
+        exclude: /node_modules/, 
         use: {
-          loader: 'babel-loader', // Allows Babel and Webpack to work together
+          loader: 'babel-loader', 
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'] // Environment Presets... Not 100% what these do
+            presets: ['@babel/preset-react', '@babel/preset-env']
           }
         },
         resolve: {
@@ -22,8 +22,8 @@ module.exports = {
       }
     ]
   },
-   output: { // IMPORTANT: This is where we set the bundle to be built into a folder
-    filename: 'bundle.js', // The name of the file to build
-    path: __dirname + '/client/dist' // Where Webpack should place the file
+   output: {
+    filename: 'bundle.js', 
+    path: __dirname + '/client/dist' 
   }
 };
